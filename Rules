@@ -27,7 +27,7 @@ compile '*' do
     # don’t filter binary items
   else
     filter :erb
-    layout 'default'
+    layout 'default2'
   end
 end
 

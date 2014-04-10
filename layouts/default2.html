@@ -2,33 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-                <title>arst</title>
+                <title><%= @item[:title] %></title>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
                 <link rel="stylesheet" href="/style.css">  
 
 		<!-- you don't need to keep this, but it's cool for stats! -->
-		<meta name="generator" content="nanoc 3.6.7"> 
+		<meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
 	</head>
-<<<<<<< HEAD
-	<body>
-
-		<div id="header">
-			<p>
-			<a href="">about</a> |
-			<a href="/archive/">archive</a> |
-			<a href="">yes</a>
-			</p>
-			<hr>
-		</div>
-		<div id="main">
-			<section class="content">
-				
-<div class="post">
-	<h1>arst </h1>
-	<aside>February 2, 2013 </aside>
-=======
         <body>
           <div class="col-md-12">
             <div class="row">
@@ -39,32 +21,11 @@
               <div class="col-sm-9">
                 <!--Body content-->
                 <section class="main-content">
-                  
-<div class="post">
-	<h1>Arst </h1>
-	<aside>Posted at: February 2, 2013 </aside>
-        <p>Tags: <a href="/tags/random" rel="tag">random</a>, <a href="/tags/test" rel="tag">test</a></p>
->>>>>>> Created alternate default layout (bootstrap loaded)  and added tags for testing. Si.
-		<article>
-			<p>asfdjklsadasdfjlkasldfkjljkasdflkjasljkdflkjasdflkjsakldjf lkasjdfkjlaksjfklasfjklsaklfkljasfdklj</p>
-
-<p>vapalargo</p>
-
-<p>arstoien</p>
-
-<p>stenst##st
-   starst</p>
-
-<p>stasrt</p>
-
-		</article>
-</div>
-
+                  <%= yield %>
                 </section>
               </div>
             </div>
           </div>
 	</body>
 </html>
-
 

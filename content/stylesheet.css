@@ -1,13 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Droid Sans', 'Times New Roman', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 body {
-  background: #f4f4f4;
+  /**  background: #f4f4f4; **/
   color: #444444;
-	background-image: url('absurdidad.png');
+}
+
+.sidebar {
+  background: #fff;
+  height: 100%;
 }
 
 a {
@@ -16,11 +20,13 @@ a {
 
 a:link,
 a:visited {
-  color: #f34c83;
+  text-decoration: none;
+  color: #333333;
 }
 
 a:hover {
-  color: #b3355e;
+  color: #AD5CAD;
+  text-decoration:none;
 }
 
 #main {

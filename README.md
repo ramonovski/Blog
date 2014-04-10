@@ -1,0 +1,6 @@
+Dependencies
+
+- kramdown
+- nanoc
+- adsf
+
