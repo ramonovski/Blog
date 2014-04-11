@@ -13,6 +13,10 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  generate_tags(@items)
+end
+
 compile '/stylesheet/' do
   # don’t filter or layout
 end
@@ -20,6 +24,11 @@ end
 compile '/posts/*' do
   filter :kramdown
   layout 'post'
+end
+
+compile '/tags/*' do
+  filter :erb
+  layout 'tags'
 end
 
 compile '*' do

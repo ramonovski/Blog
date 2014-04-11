@@ -17,6 +17,27 @@ module PostHelper
     return content
   end
 
+  #creates tags pages
+  def generate_tags(items)
+    require 'set'
+    tags = Set.new
+
+    #iterate over each post
+    items.each do |post|
+      #add a each post tag to tags collection
+      unless post[:tags].nil?
+        post[:tags].each { |tag| tags.add(tag.downcase) }
+      end
+    end
+
+    #create new page item dynamically per tag
+    tags.each do |tag|
+      items << Nanoc::Item.new(
+        "",
+        { :tag => tag },
+        "/tags/#{tag}/")
+    end
+  end
 end
 
 include PostHelper
