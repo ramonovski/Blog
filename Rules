@@ -26,9 +26,14 @@ compile '/posts/*' do
   layout 'post'
 end
 
-compile '/tags/*' do
+compile '/tags' do
   filter :erb
   layout 'tags'
+end
+
+compile '/tags/*/' do
+  filter :erb
+  layout 'tag'
 end
 
 compile '*' do

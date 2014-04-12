@@ -33,11 +33,14 @@ module PostHelper
     #create new page item dynamically per tag
     tags.each do |tag|
       items << Nanoc::Item.new(
-        "",
+        "Tag #{tag}",
         { :tag => tag },
         "/tags/#{tag}/")
     end
+
+     items << Nanoc::Item.new("Tags index", {:all_tags => tags}, "/tags/");
   end
+
 end
 
 include PostHelper
