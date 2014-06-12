@@ -1,0 +1,9 @@
+<% render 'default' do %>
+<div class="post">
+  <h1> TAGS </h1>
+  <h2><% @item[:all_tags].each do |tag| %>
+    <%= link_to tag, tag %> 
+    <% end %>
+  </h2>
+</div>
+<% end %>

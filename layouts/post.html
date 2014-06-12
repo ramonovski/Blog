@@ -1,7 +1,8 @@
 <% render 'default' do %>
 <div class="post">
-	<h1><%= item[:title] %> </h1>
-	<aside><%= get_pretty_date(item) %> </aside>
+	<h1><%= item[:title].capitalize %> </h1>
+	<aside>Posted at: <%= get_pretty_date(item) %> </aside>
+        <p>Tags: <%= tags_for(item, {base_url:"/tags/"}) %></p>
 		<article>
 			<%= yield %>
 		</article>
