@@ -4,7 +4,8 @@ title: Archive
 
 <% sorted_articles.each do |post| %>
 <div class="post">
-	<h1><%= link_to post[:title].capitalize, post.path %></h1>
-	<%= get_pretty_date(post) %>
+	<ul>
+	<li><span><%= post[:created_at].strftime('%Y-%m-%d') %></span> : <%= link_to post[:title].capitalize, post.path %></li>
+</ul>
 </div>
 <% end %>
